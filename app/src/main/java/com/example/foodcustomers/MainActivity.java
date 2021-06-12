@@ -47,10 +47,16 @@ public class MainActivity extends AppCompatActivity {
         foodRecycle.setAdapter(foodAdapter);
     }
 
-    public void onMyButtonClick(View view)
+    public void onBasketButtonClick(View view)
     {
         Intent intent = new Intent(MainActivity.this, Basket.class);
         startActivity(intent);
+    }
+
+    public void onAddRowItemClick(View view)
+    {
+        // выводим сообщение
+        Toast.makeText(this, "Товар добавлен!", Toast.LENGTH_SHORT).show();
     }
 
 }

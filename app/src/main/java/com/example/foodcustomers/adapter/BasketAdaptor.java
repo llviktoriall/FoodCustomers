@@ -18,18 +18,18 @@ import java.util.List;
 public class BasketAdaptor extends RecyclerView.Adapter<BasketAdaptor.FoodViewHolder> {
 
     Context context;
-    List<Food> foodList;
+    List<Food> basketList;
 
-    public BasketAdaptor(Context context, List<Food> foodList) {
+    public BasketAdaptor(Context context, List<Food> basketList) {
         this.context = context;
-        this.foodList = foodList;
+        this.basketList = basketList;
     }
 
     @NonNull
     @Override
     public FoodViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.food_row_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.basket_row_item, parent, false);
 
         return new FoodViewHolder(view);
     }
@@ -37,14 +37,14 @@ public class BasketAdaptor extends RecyclerView.Adapter<BasketAdaptor.FoodViewHo
     @Override
     public void onBindViewHolder(@NonNull FoodViewHolder holder, int position) {
 
-        holder.foodImage.setImageResource(foodList.get(position).getImageURL());
-        holder.name.setText((CharSequence)foodList.get(position).getName());
-        holder.price.setText(String.valueOf(foodList.get(position).getPrice()));
+        holder.foodImage.setImageResource(basketList.get(position).getImageURL());
+        holder.name.setText((CharSequence) basketList.get(position).getName());
+        holder.price.setText(String.valueOf(basketList.get(position).getPrice()));
     }
 
     @Override
     public int getItemCount() {
-        return foodList.size();
+        return basketList.size();
     }
 
     public static final class FoodViewHolder extends RecyclerView.ViewHolder {

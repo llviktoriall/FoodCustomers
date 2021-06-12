@@ -32,17 +32,19 @@ public class Basket extends AppCompatActivity {
     }
 
     private void setBasketRecycle(List<Food> foodList){
-        basketRecycle = findViewById(R.id.food_recycler);
+        basketRecycle = findViewById(R.id.basket_recycle);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         basketRecycle.setLayoutManager(layoutManager);
         basketAdaptor = new BasketAdaptor(this, foodList);
         basketRecycle.setAdapter(basketAdaptor);
     }
 
-    public void onMyButtonClick(View view)
+
+
+    public void onDeleteRowItemClick(View view)
     {
         // выводим сообщение
-        Toast.makeText(this, "Зачем вы нажали?", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Товар удален!", Toast.LENGTH_SHORT).show();
     }
 
 }

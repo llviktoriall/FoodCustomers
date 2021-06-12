@@ -63,7 +63,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/item_image"
             app:layout_constraintStart_toEndOf="@+id/item_image"
             app:layout_constraintTop_toBottomOf="@+id/item_price"
-            android:onClick="onMyButtonClick"/>
+            android:onClick="onDeleteRowItemClick"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
 
