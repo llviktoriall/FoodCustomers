@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/main_logo_1" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/food_recycler"
+        android:id="@+id/basket_recycle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -31,8 +31,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
@@ -47,6 +47,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="59dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/img_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="onOrderButtonClick"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

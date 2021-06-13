@@ -47,4 +47,10 @@ public class Basket extends AppCompatActivity {
         Toast.makeText(this, "Товар удален!", Toast.LENGTH_SHORT).show();
     }
 
+    public void onBackButtonClick(View view)
+    {
+        Intent intent = new Intent(Basket.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }

@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.lang.reflect.Array;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //try {
+        //    ConnectDB db = new ConnectDB("http://10.0.2.2:8080/products");
+        //    String s = db.GetInfo();
+        //} catch (IOException e) {
+         //   e.printStackTrace();
+        //}
 
         List<Food> foodList = new ArrayList<>();
         foodList.add(new Food("Круассан", 55, "Выпечка", R.drawable.food_1));
@@ -40,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setFoodRecycle(List<Food> foodList){
-        foodRecycle = findViewById(R.id.food_recycler);
+        foodRecycle = findViewById(R.id.basket_recycle);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         foodRecycle.setLayoutManager(layoutManager);
         foodAdapter = new FoodAdapter(this, foodList);
@@ -57,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
     {
         // выводим сообщение
         Toast.makeText(this, "Товар добавлен!", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onOrderButtonClick(View view)
+    {
+        // выводим сообщение
+        Toast.makeText(this, "Ваш заказ еще не готов!", Toast.LENGTH_SHORT).show();
     }
 
 }
